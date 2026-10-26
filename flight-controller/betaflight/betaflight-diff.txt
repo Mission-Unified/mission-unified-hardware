@@ -1,0 +1,68 @@
+diff all
+
+# version
+# Betaflight / STM32F405 (F405) 2025.12.2 May 24 2026 / 15:13:32 (79065c96b) MSP API: 1.47
+# config rev: e378347
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name OMNIBUSF4SD
+manufacturer_id AIRB
+signature 
+
+# feature
+feature GPS
+feature LED_STRIP
+feature OSD
+
+# serial
+serial UART1 2 115200 57600 0 115200
+serial UART3 1 115200 57600 0 115200
+serial UART6 64 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1500 2100 0 0
+aux 1 1 1 1500 2100 0 0
+
+# master
+set acc_calibration = 7,17,-23,1
+set gps_sbas_mode = AUTO
+set osd_warn_bitmask = 430079
+set osd_gps_lon_pos = 14677
+set osd_gps_lat_pos = 14677
+set osd_gps_sats_pos = 14677
+set debug_mode = GHST_MSP
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 2
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 1
+
+# save configuration
+save
+# 
